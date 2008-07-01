@@ -1,0 +1,59 @@
+SKELETON STRUCTURE
+
+There are a few steps that I am constantly going through every time I start a
+new application...adding stuff to the lib directory, adding a bunch of plugins
+and rails, setting up basic authentication, etc.
+
+Instead of constantly repeating these steps I just have a skeleton app named
+“vanilla” that I have as a private repo on GitHub. Anytime I want to start a
+new app I just clone that app and start. I have a ton of plugins in this
+skeleton app and almost all of them are setup as git submodules. If I know
+that some of them aren’t going to be used I can just remove the reference to
+them in .gitmodules. Then I just do “git submodule init”, “git submodule
+update” and it pulls in all the goods.
+
+Additionally, within this single skeleton app I can have various starting
+points for an application on separate branches. Maybe one with just basic
+restful-authentication, another requiring activation upon user signup, another
+with role_requirement already setup, etc. Then I can just switch to that
+branch and start from that point.
+
+The one thing that I need to make sure of is that I change the location of the
+remote “origin” on this, though this is part of creating a repository on
+GitHub so I get reminded at that point.
+
+PLUGIN DEVELOPMENT
+
+Any plugins or lib code I develop all goes into a special “plugin_tester” app.
+This app is not even under version control, because all of the plugins are
+separate repositories within it. This works nicely as a testing environment
+for the plugins. I can work on the plugin from the “plugin_tester” app, push
+changes to a plugin up to Github and then pull them back into the “vanilla”
+skeleton app submodules.
+
+DEPLOYMENT
+
+As we discussed, I have been using Git for deployment and it seems to work
+just fine. Keep in mind that I have never used Capistrano, so I don’t know
+what I’m missing on that front and my process may be more difficult than
+necessary. Anyway, anything I do anymore is hosted on Github, so when I deploy
+I just do the following:
+
+1. Local Environment
+    rake db:dump (that’s right)
+    add “config/mongrel_cluster.yml” to .gitignore
+    git commit –a –m ‘ready for deploy’
+    git push 
+2. Production Environment
+    create database in cpanel or whatever
+    git clone git@github.com:bilson/whatever.git
+    git submodule init
+    git submodule update
+    rake db:imp FILE=db/my_db_file.sql.gz RAILS_ENV=production (dumpimp again!)
+    nano config/environment.rb -> uncomment line that sets to production mode
+    configure mongrel stuff
+    mongrel_rails cluster::start
+
+Any subsequent changes I do locally just require a “git push” and “git pull”
+from production. Fairly painless I think. The only things that usually trip me
+up are making sure that I ignore
