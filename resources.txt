@@ -9,3 +9,6 @@ Git Cheat Sheet
   
 Git Magic
   http://www-cs-students.stanford.edu/~blynn/gitmagic/index.html
+
+GitNub
+  http://github.com/Caged/gitnub/wikis/home
