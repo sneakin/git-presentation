@@ -1,0 +1,30 @@
+Why git?
+  so easy to start working on a project publicly and contribute
+  decentralized
+
+  
+Content not files
+side by side comparison with svn
+  goodbye "sane" revision numbers! hello relative numbers
+  revert replaced by checkout/reset
+  
+
+pushing
+branching
+  1-2 branches
+  branch per feature (local or remote?)
+  branch for bugs!
+  
+MERGING!
+persisting local changes to externals
+rebase -i
+  
+commit --amend
+commit -i
+cherry picking
+  easy production branch
+  
+submodules
+hooks
+
+migration to git
