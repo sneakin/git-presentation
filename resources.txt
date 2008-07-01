@@ -12,3 +12,6 @@ Git Magic
 
 GitNub
   http://github.com/Caged/gitnub/wikis/home
+
+My Git Workflow
+  http://osteele.com/archives/2008/05/my-git-workflow
