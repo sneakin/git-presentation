@@ -1,0 +1,11 @@
+Git SVN Crash Coarse
+  http://git.or.cz/course/svn.html
+
+37 Signals Git Resources
+  https://37s.backpackit.com/pub/1465067
+  
+Git Cheat Sheet
+  http://cheat.errtheblog.com/s/git/
+  
+Git Magic
+  http://www-cs-students.stanford.edu/~blynn/gitmagic/index.html
