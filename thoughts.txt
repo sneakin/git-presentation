@@ -4,6 +4,14 @@ Why git?
 
   
 Content not files
+  echo one > test.txt
+  git add test.txt
+  echo two > test.txt
+  git commit
+  git status
+    #	modified:   test.txt
+  
+  
 side by side comparison with svn
   goodbye "sane" revision numbers! hello relative numbers
   revert replaced by checkout/reset
