@@ -11,8 +11,8 @@ Why git?
     But there's darcs, bzr, hg, svk, and arch
       All do pretty much the same thing as git, some better, some not
       Personal experience:
-        darcs does/did take forever for such things as merging a fork back into the main project under odd circumstances
-        bzr makes it a pita to add hooks: gotta make a plugin
+        darcs does/did take forever for such things as merging a fork back into the main project under odd circumstances; does make cherry picking changes during commit a breeze
+        bzr makes it a pita to add hooks: gotta make a plugin; there goes cerebus (sp?), snitch, and all our fun scripts
         hg lacks submodules (svn externals)
         leaving git: submodules a must w/ Rails, hooks don't require hacking git, and it won't spin its wheels in the mud
 
@@ -45,11 +45,12 @@ Side by side comparison with svn (can add others)
 
 
 Branching
+  how to
   best practices
     development and production?
       branch for bug-fixes?
     branch per feature? (local or remote?)
-  branch per experiment
+    branch per experiment
 
 MERGING!
   git keeps track of merged commits
@@ -58,6 +59,9 @@ MERGING!
 
 Submodules
   externals but better
+  change rails in your vendor dir, commit, update rails, smile
+
+Hooks
   
 Handy Tricks  
   stash
@@ -66,7 +70,6 @@ Handy Tricks
   add --interactive
   cherry-pick
     easy movement of fixes from other branches into production branch
-  hooks
 
 migrating to git
   git-svn: work using git, push/pull to svn
