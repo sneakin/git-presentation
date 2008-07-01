@@ -53,6 +53,7 @@ Branching
     branch per experiment
 
 MERGING!
+  following repos that you've forked on github
   git keeps track of merged commits
   rebase --interactive
   persisting local changes to externals
