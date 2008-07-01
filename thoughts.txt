@@ -1,6 +1,10 @@
+GIT
+  how i learned to stop worrying and love the hashes
+  
+  
 Why git?
-  so easy to start working on a project publicly and contribute
   decentralized
+  so easy to start working on a project publicly and contribute
 
   
 Content not files
@@ -12,27 +16,41 @@ Content not files
     #	modified:   test.txt
   
   
-side by side comparison with svn
-  goodbye "sane" revision numbers! hello relative numbers
-  revert replaced by checkout/reset
-  
+Side by side comparison with svn
+  command comparison
+    revert replaced by checkout/reset
+  workflow changes
+  goodbye "sane" revision numbers! hello crazy hashes and relatives
+    1, 2, 3 replaced with
+      b8cb862361b32f5fc35553c08219ff43cf2ff374
+      79413593654f5bd09d66b48dd5b48262e8af5928
 
-pushing
-branching
-  1-2 branches
-  branch per feature (local or remote?)
-  branch for bugs!
+  
+pushing ?
+
+
+Branching
+  best practices
+    development and production?
+      branch for bug-fixes?
+    branch per feature? (local or remote?)
   
 MERGING!
-persisting local changes to externals
-rebase -i
+  git keeps track of merged commits
+  rebase --interactive
+  persisting local changes to externals
+
+Handy Tricks  
+  commit --amend
+    ah crap, I forgot one file or messed up the commit message
+  add --interactive
+  cherry-pick
+    easy movement of fixes from other branches into production branch
   
-commit --amend
-commit -i
-cherry picking
-  easy production branch
+Submodules
+  externals but better
   
-submodules
 hooks
 
 migration to git
+  initial import
