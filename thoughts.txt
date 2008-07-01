@@ -1,13 +1,23 @@
 GIT
   how i learned to stop worrying and love the hashes
-  
+
+What is and why version control? Pose question...skip if everyone is smart  
   
 Why git?
+  Rails uses it...nuff said, end of pres. Good bye.
   decentralized
-  so easy to start working on a project publicly and contribute
+    so easy to start working on a project publicly and contribute
+      compared w/ SVN
+    But there's darcs, bzr, hg, svk, and arch
+      All do pretty much the same thing as git, some better, some not
+      Personal experience:
+        darcs does/did take forever for such things as merging a fork back into the main project under odd circumstances
+        bzr makes it a pita to add hooks: gotta make a plugin
+        hg lacks submodules (svn externals)
+        leaving git: submodules a must w/ Rails, hooks don't require hacking git, and it won't spin its wheels in the mud
 
   
-Content not files
+Content not files (eli?)
   echo one > test.txt
   git add test.txt
   echo two > test.txt
@@ -16,42 +26,48 @@ Content not files
     #	modified:   test.txt
   
   
-Side by side comparison with svn
-  command comparison
+Side by side comparison with svn (can add others)
+  basic shared commands: init, add, rm, mv
+  command differences
+    commit => add files first
     checkout => clone
     revert => checkout/reset
   workflow changes
+    doing distributed dev
+    can we centralize? yes
+    pull
+    pushing
+      push <branch> [--all]
   goodbye "sane" revision numbers! hello crazy hashes and relatives
     1, 2, 3 replaced with
       b8cb862361b32f5fc35553c08219ff43cf2ff374
       79413593654f5bd09d66b48dd5b48262e8af5928
 
-  
-pushing
-  push <branch> [--all]
 
 Branching
   best practices
     development and production?
       branch for bug-fixes?
     branch per feature? (local or remote?)
-  
+  branch per experiment
+
 MERGING!
   git keeps track of merged commits
   rebase --interactive
   persisting local changes to externals
 
+Submodules
+  externals but better
+  
 Handy Tricks  
+  stash
   commit --amend
     ah crap, I forgot one file or messed up the commit message
   add --interactive
   cherry-pick
     easy movement of fixes from other branches into production branch
-  
-Submodules
-  externals but better
-  
-hooks
+  hooks
 
-migration to git
-  initial import
+migrating to git
+  git-svn: work using git, push/pull to svn
+  tailor: makes switching VCSes fashionable, converts between pretty much every WCS
