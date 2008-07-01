@@ -18,7 +18,8 @@ Content not files
   
 Side by side comparison with svn
   command comparison
-    revert replaced by checkout/reset
+    checkout => clone
+    revert => checkout/reset
   workflow changes
   goodbye "sane" revision numbers! hello crazy hashes and relatives
     1, 2, 3 replaced with
@@ -26,8 +27,8 @@ Side by side comparison with svn
       79413593654f5bd09d66b48dd5b48262e8af5928
 
   
-pushing ?
-
+pushing
+  push <branch> [--all]
 
 Branching
   best practices
