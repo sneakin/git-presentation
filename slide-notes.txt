@@ -1,20 +1,24 @@
 GIT
-  how i learned to stop worrying and love the hashes
+  how I learned to stop worrying and love the hashes
 
 What is and why version control? Pose question...skip if everyone is smart  
   
 Why git?
-  Rails uses it...nuff said, end of pres. Good bye.
-  decentralized
-    so easy to start working on a project publicly and contribute
-      compared w/ SVN
-    But there's darcs, bzr, hg, svk, and arch
-      All do pretty much the same thing as git, some better, some not
-      Personal experience:
-        darcs does/did take forever for such things as merging a fork back into the main project under odd circumstances; does make cherry picking changes during commit a breeze
-        bzr makes it a pita to add hooks: gotta make a plugin; there goes cerebus (sp?), snitch, and all our fun scripts
-        hg lacks submodules (svn externals)
-        leaving git: submodules a must w/ Rails, hooks don't require hacking git, and it won't spin its wheels in the mud
+  Rails uses it... nuff said, end of pres. Good bye.
+  Stupid fast, minimal disk space, minimal files
+    git clone of a large project does not require going to lunch
+    Full repo with revision history is significantly smaller than an SVN checkout even for large projects
+    Less files in a repo = faster experience when developing
+  Decentralized
+    Amazingly easy to become a contributor to open source projects compared to SVN
+    So make a fork, and request a pull and walk away!
+  But there's darcs, bzr, hg, svk, and arch
+    All do pretty much the same thing as git, some better, some not
+    Personal experience:
+      darcs does/did take forever for such things as merging a fork back into the main project under odd circumstances; does make cherry picking changes during commit a breeze
+      bzr makes it a pita to add hooks: gotta make a plugin; there goes cerebus (sp?), snitch, and all our fun scripts
+      hg lacks submodules (svn externals)
+      leaving git: submodules a must w/ Rails, hooks don't require hacking git, and it won't spin its wheels in the mud
 
 Installing git
   OS X
