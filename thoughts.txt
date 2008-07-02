@@ -121,9 +121,9 @@ Branching
 
 MERGING!
   Following repos that you've forked on github
-    github pull username
+    github pull username # create and update a local branch
     git checkout master
-    git pull username master
+    git merge username/master # merge changes from branch
   Git keeps track of merged commits, no need for logging in commit messages
 
 
