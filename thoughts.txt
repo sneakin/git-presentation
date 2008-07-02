@@ -139,7 +139,13 @@ Submodules
     change rails in your vendor dir, commit, update rails, smile
   
 Hooks
-  
+  list of available hooks...
+  hooks live under .git/hooks as good ole shell scripts
+  hooks don't get pushed and pulled
+  so they must be setup inside the remote repo's .git dir
+    github provides a post-receive **URL**
+  otherwise very similar to svn
+  except p*-commit which gets called for local commits...use p*-receive to emulate SVN when pushing your changes to a server
   
 Handy Tricks  
   stash
