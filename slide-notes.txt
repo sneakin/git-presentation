@@ -12,13 +12,14 @@ Why git?
   Decentralized
     Amazingly easy to become a contributor to open source projects compared to SVN
     So make a fork, and request a pull and walk away!
-  But there's darcs, bzr, hg, svk, and arch
+  What about darcs, bzr, hg, svk, and arch?
     All do pretty much the same thing as git, some better, some not
     Personal experience:
       darcs does/did take forever for such things as merging a fork back into the main project under odd circumstances; does make cherry picking changes during commit a breeze
       bzr makes it a pita to add hooks: gotta make a plugin; there goes cerebus (sp?), snitch, and all our fun scripts
       hg lacks submodules (svn externals)
       leaving git: submodules a must w/ Rails, hooks don't require hacking git, and it won't spin its wheels in the mud
+
 
 Installing git
   OS X
@@ -28,7 +29,7 @@ Installing git
   Windows? ha
     Install cygwin and compile from source
   
-Content not files (eli?)
+Git tracks content not files
   echo one > test.txt
   git add test.txt
   echo two > test.txt
@@ -37,23 +38,78 @@ Content not files (eli?)
     #	modified:   test.txt
   
   
-Side by side comparison with svn (can add others)
-  basic shared commands: init, add, rm, mv
-  command differences
-    commit => add files first
-    checkout => clone
-    revert => checkout/reset
-  workflow changes
-    doing distributed dev
-    can we centralize? yes
-    pull
-    pushing
-      push <branch> [--all]
-  goodbye "sane" revision numbers! hello crazy hashes and relatives
+Side by side comparison with SVN
+  Automatic pipe through less!
+  No shortened command names!
+  New repo
+    git init
+    git commit -a -m 'Initial import.'
+  Initial checkout of another repo
+    svn co REPO
+    git clone REPO
+  Status
+    svn st
+    git status
+  Difference
+    svn diff | less
+    git diff
+  Adding a file to a repo
+    git commit FILE
+    # or
+    git add FILE
+    git commit
+  Committing just a few files
+    svn commit FILE_1 FILE_2 DIR_1
+    git add FILE_1
+    git add FILE_2 DIR_2
+    git commit
+    # or
+    git commit FILE_1 FILE_2 DIR_1
+  Getting your changes out
+    svn commit # duh
+    git push
+    # or
+    git svn dcommit
+  Catching up
+    svn up
+    git pull
+    # or
+    git svn rebase
+  Moving
+    svn mv FILE NEW_FILE
+    git mv FILE NEW_FILE
+  Deleting
+    svn rm FILE
+    git rm FILE
+  Log
+    svn log | less
+    git log
+  Checkout old revision
+  Revert a file
+    svn revert FILE
+    git checkout FILE
+    # or
+    git reset --hard FILE (I think)
+  Branching
+    svn cp (?)
+    git branch BRANCH
+    git checkout BRANCH
+    # or
+    git checkout -b BRANCH
+    # TODO: branch push code
+  Merging
+    # cry if using SVN
+    git merge BRANCH
+    
+  Goodbye "sane" revision numbers! Hello crazy hashes and relatives
     1, 2, 3 replaced with
       b8cb862361b32f5fc35553c08219ff43cf2ff374
       79413593654f5bd09d66b48dd5b48262e8af5928
-
+      HEAD^
+      HEAD~3
+  
+Workflow Changes
+  Decentralized? More like many centers.
 
 Branching
   how to
@@ -64,29 +120,31 @@ Branching
     branch per experiment
 
 MERGING!
-  following repos that you've forked on github
+  Following repos that you've forked on github
     github pull username
     git checkout master
     git pull username master
-  
-  git keeps track of merged commits
-  rebase --interactive
-  persisting local changes to externals
+  Git keeps track of merged commits, no need for logging in commit messages
+
 
 Submodules
   externals but better
-  change rails in your vendor dir, commit, update rails, smile
-
+  persisting local changes to submodules
+    change rails in your vendor dir, commit, update rails, smile
+  
 Hooks
+  
   
 Handy Tricks  
   stash
+  rebase --interactive
   commit --amend
     ah crap, I forgot one file or messed up the commit message
   add --interactive
   cherry-pick
-    easy movement of fixes from other branches into production branch
+    easy movement of fixes from one branch to another
 
-migrating to git
+
+Migrating to git
   git-svn: work using git, push/pull to svn
   tailor: makes switching VCSes fashionable, converts between pretty much every WCS
