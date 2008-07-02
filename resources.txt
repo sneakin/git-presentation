@@ -15,3 +15,9 @@ GitNub
 
 My Git Workflow
   http://osteele.com/archives/2008/05/my-git-workflow
+  
+Installing Git in OS X (because everyone uses Macs... wait... you don't!?)
+  http://solutions.treypiepmeier.com/2008/02/25/installing-git-on-os-x-leopard/
+  
+Installing on Windows...
+  Install Cygwin and then compile from source
