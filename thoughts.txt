@@ -121,9 +121,15 @@ Branching
 
 MERGING!
   Following repos that you've forked on github
-    github pull username # create and update a local branch
-    git checkout master
-    git merge username/master # merge changes from branch
+    Plain git:
+      git remote add jqr git://github.com/jqr/git-presentation.git
+      git fetch jqr
+      [git checkout master]
+      git merge jqr/master
+    With github gem:
+      github pull username # create and update a local branch
+      [git checkout master]
+      git merge username/master # merge changes from branch
   Git keeps track of merged commits, no need for logging in commit messages
 
 
