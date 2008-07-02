@@ -54,6 +54,10 @@ Branching
 
 MERGING!
   following repos that you've forked on github
+    github pull username
+    git checkout master
+    git pull username master
+  
   git keeps track of merged commits
   rebase --interactive
   persisting local changes to externals
