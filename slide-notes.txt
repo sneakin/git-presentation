@@ -16,6 +16,13 @@ Why git?
         hg lacks submodules (svn externals)
         leaving git: submodules a must w/ Rails, hooks don't require hacking git, and it won't spin its wheels in the mud
 
+Installing git
+  OS X
+    port install git-core +svn
+  Linux
+    just use your package manager fool!
+  Windows? ha
+    Install cygwin and compile from source
   
 Content not files (eli?)
   echo one > test.txt
