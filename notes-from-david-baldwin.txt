@@ -56,4 +56,4 @@ I just do the following:
 
 Any subsequent changes I do locally just require a “git push” and “git pull”
 from production. Fairly painless I think. The only things that usually trip me
-up are making sure that I ignore
+up are making sure that I ignore the appropriate public directories if I’ve got file uploads and such.
