@@ -1,7 +1,8 @@
 GIT
   how I learned to stop worrying and love the hashes
+  * if we're doing movie references here, I think we should not overlook the impact of the Wayans brothers as their important film "I'm Gonna Git You Sucka" was the real Git "Pickaxe"
 
-What is and why version control? Pose question...skip if everyone is smart  
+What is and why version control? Pose question...skip if everyone is smart
   
 Why git?
   Rails uses it... nuff said, end of pres. Good bye.
