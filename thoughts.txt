@@ -97,7 +97,7 @@ Side by side comparison with SVN
     git checkout BRANCH
     # or
     git checkout -b BRANCH
-    # TODO: branch push code
+    git push origin <branch_name> # optionally
   Merging
     # cry if using SVN
     git merge BRANCH
